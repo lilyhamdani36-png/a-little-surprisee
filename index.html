@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff7e8">
+  <meta name="description" content="A little digital surprise made with love and good wishes.">
+  <title>A Little Surprise For You ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Pacifico&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div id="floating-decor" class="floating-decor" aria-hidden="true"></div>
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <a class="brand" href="#page-1" aria-label="A Little Surprise For You">
+      <span class="brand-mark">♡</span>
+      <span>A Little Surprise <small>for you</small></span>
+    </a>
+    <div class="topbar-right">
+      <div class="progress-wrap" aria-label="Website progress">
+        <span id="progress-label">01 / 08</span>
+        <div class="progress-track"><span id="progress-fill"></span></div>
+      </div>
+      <button id="music-toggle" class="music-toggle" type="button" aria-label="Play background music">
+        <span class="music-icon">♫</span><span id="music-label">Putar musik</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE 1: THE SECRET -->
+    <section class="page active" id="page-1" data-page="1">
+      <div class="secret-card paper-card">
+        <span class="sticker sticker-star">✦</span>
+        <span class="sticker sticker-flower">✿</span>
+        <span class="tiny-label">a tiny surprise is waiting</span>
+        <div class="secret-illustration" aria-hidden="true">
+          <div class="gift-box"><span class="gift-ribbon"></span><span class="gift-bow">⌁</span></div>
+          <span class="spark spark-a">✧</span><span class="spark spark-b">✦</span>
+          <span class="spark spark-c">♡</span>
+        </div>
+        <p class="eyebrow">psst... just for you</p>
+        <h1>Hey, you!<br><span>There's something</span><br>waiting for you...</h1>
+        <p class="intro-copy">A little page, a little surprise, and a whole lot of good wishes. Are you curious?</p>
+        <button class="primary-btn" id="open-surprise" type="button">Buka kejutan? <span>♡</span></button>
+        <p class="micro-note">made with a little extra thought ✿</p>
+      </div>
+    </section>
+
+    <!-- PAGE 2: THE BIG SURPRISE -->
+    <section class="page" id="page-2" data-page="2">
+      <div class="birthday-card paper-card">
+        <div class="confetti-word">YAY!</div>
+        <div class="birthday-art" aria-hidden="true">
+          <span class="balloon balloon-pink"></span>
+          <span class="balloon balloon-blue"></span>
+          <span class="balloon balloon-yellow"></span>
+          <div class="cake"><span class="candle">✦</span><span class="cake-top"></span><span class="cake-middle"></span><span class="cake-bottom"></span></div>
+          <span class="art-flower">✿</span>
+          <span class="art-star">✧</span>
+        </div>
+        <p class="eyebrow">today is all about you</p>
+        <h1 class="birthday-heading">HAPPY BIRTHDAY<br><span>TO MY DEAR FRIEND!</span></h1>
+        <p class="birthday-message">Another chapter begins! Semoga hari ini dipenuhi banyak senyuman, cerita seru, dan hal-hal kecil yang bisa membuatmu bahagia. You deserve all the good things, Jessica! ♡</p>
+        <div class="tag-row"><span>more smiles</span><span>more memories</span><span>more good things</span></div>
+        <button class="primary-btn" id="begin-journey" type="button">Mulai <span>♡</span></button>
+      </div>
+    </section>
+
+    <!-- PAGE 3: LITTLE MEMORIES -->
+    <section class="page page-scroll" id="page-3" data-page="3">
+      <div class="section-heading">
+        <p class="eyebrow">a collection of little moments</p>
+        <h2>Little <span>Memories</span></h2>
+        <p>Beberapa kenangan terlalu berharga untuk dilupakan. Ini sebagian cerita yang layak disimpan. ♡</p>
+      </div>
+      <div class="memory-feature paper-card">
+        <div class="polaroid main-polaroid">
+          <img id="memory-image" src="assets/images/memory1.svg" alt="Placeholder foto kenangan pertama">
+          <p id="memory-caption" class="polaroid-caption">A little moment to remember ♡</p>
+        </div>
+        <div class="gallery-controls">
+          <button class="round-btn" id="memory-prev" type="button" aria-label="Foto sebelumnya">←</button>
+          <span id="memory-count">01 / 03</span>
+          <button class="round-btn" id="memory-next" type="button" aria-label="Foto berikutnya">→</button>
+        </div>
+      </div>
+      <div class="page-actions"><button class="secondary-btn" data-prev type="button">← Back</button><button class="primary-btn" data-next type="button">New Chapter <span>→</span></button></div>
+    </section>
+
+    <!-- PAGE 4: ACHIEVEMENTS -->
+    <section class="page page-scroll" id="page-4" data-page="4">
+      <div class="section-heading">
+        <p class="eyebrow">a little appreciation journal</p>
+        <h2>Look How Far <span>You've Come!</span></h2>
+        <p>Setiap langkah, usaha, dan keputusan berani pantas mendapat apresiasi. ♡</p>
+      </div>
+      <div id="achievement-grid" class="achievement-grid"></div>
+      <div class="page-actions"><button class="secondary-btn" data-prev type="button">← Back</button><button class="primary-btn" data-next type="button">New Chapter <span>→</span></button></div>
+    </section>
+
+    <!-- PAGE 5: PELOPOR -->
+    <section class="page page-scroll" id="page-5" data-page="5">
+      <div class="section-heading">
+        <p class="eyebrow">a special chapter of my journey</p>
+        <h2>A Little Part of <span>My Story ♡</span></h2>
+        <p>Some experiences may only happen once, but the memories will always have their own place.</p>
+      </div>
+      <div class="pelopor-panel paper-card">
+        <div class="pelopor-copy">
+          <h3>Pelopor Pendidikan Anak <span>Sumatera Utara 2026</span></h3>
+          <p>By the way, ada satu cerita yang ingin aku abadikan di bagian ini. Pelopor menjadi salah satu chapter spesial dalam perjalananku. Bukan hanya tentang pengalaman tampil, tetapi juga tentang proses, keberanian, dan seseorang yang ikut menjadi bagian dari cerita ini.</p>
+          <p>Saat semifinal, aku memilih monolog dari naskah Sudah Gila karya Reza Anwar. Sebuah monolog tentang seorang suami yang merindukan istrinya yang telah tiada. Untuk mendukung penampilan tersebut, aku membutuhkan sebuah foto perempuan sebagai properti.</p>
+          <p>Malam sebelum tampil, sekitar pukul sembilan, aku masih kebingungan mencari foto yang cocok. Sampai akhirnya aku terpikir untuk meminta bantuan Jessica. Awalnya aku sempat ragu, takut kalau dia tidak berkenan. Namun, ternyata dia bersedia memberikan fotonya. Malam itu hujan turun sangat deras, dan aku harus menunggu sampai hujan sedikit reda sebelum mencari tempat untuk mencetak foto tersebut. Setelah berkeliling, akhirnya foto itu berhasil aku cetak dan masukkan ke dalam bingkai.</p>
+          <p>Hari penampilan pun tiba. Jujur, aku benar-benar gugup. Tiga nomor sebelum giliranku tampil, kakiku mulai gemetar, tanganku ikut bergetar, bahkan perutku terasa sakit karena terlalu tegang. Saat itu, aku masih bisa menggunakan HP, jadi aku terus bercerita kepada Jessica melalui chat. Aku bilang kalau aku sangat gugup, takut tidak bisa memberikan penampilan terbaik, dan berharap semuanya berjalan lancar.</p>
+          <p>Beberapa nomor kemudian, akhirnya aku maju ke depan panggung. Alhamdulillah, semuanya bisa aku lewati. Setelah selesai tampil, ada rasa lega dan bahagia yang sulit dijelaskan. Aku juga membawa foto Jessica ketika berfoto setelah penampilan. Awalnya sempat tidak diperbolehkan, tetapi aku tetap berusaha agar foto itu bisa ikut menjadi bagian dari momen tersebut.</p>
+          <p>Bagiku, foto itu bukan sekadar properti monolog. Ada cerita, usaha, dan dukungan seseorang di baliknya. Bahkan, foto tersebut akhirnya menjadi bagian dari dokumentasi Pelopor.</p>
+          <p>Dan siapa sangka, perjalanan yang dimulai dari rasa gugup, sebuah foto, dan percakapan sederhana itu menjadi salah satu bagian dari pengalaman yang paling aku banggakan. Dari semifinal ini pula aku mendapatkan kesempatan untuk terus melangkah hingga akhirnya meraih selempang Best Performance.</p>
+          <p>Thank you, Jessica, for being a little part of this journey. You may not have stood beside me on that stage, but your support became part of the story I'll always remember. ♡</p>
+        </div>
+        <div id="pelopor-grid" class="pelopor-grid"></div>
+      </div>
+      <div class="page-actions"><button class="secondary-btn" data-prev type="button">← Back</button><button class="primary-btn" data-next type="button">New Chapter <span>→</span></button></div>
+    </section>
+
+    <!-- PAGE 6: LETTER -->
+    <section class="page" id="page-6" data-page="6">
+      <div class="section-heading">
+        <p class="eyebrow">a little note from me</p>
+        <h2>A Letter <span>For You</span></h2>
+        <p>There's something I'd like you to read. Take your time, okay?</p>
+      </div>
+      <div class="letter-area">
+        <div class="envelope-wrap">
+          <button id="envelope-button" class="envelope-button" type="button" aria-label="Open the letter">
+            <div class="envelope">
+              <div class="envelope-back"></div>
+              <div class="letter-peek"><span>Dear you,</span><small>a little note ♡</small></div>
+              <div class="envelope-flap"></div>
+              <div class="envelope-front"></div>
+              <div class="envelope-heart">♡</div>
+            </div>
+          </button>
+          <p id="envelope-hint" class="envelope-hint">Tekan amplop untuk membuka surat</p>
+        </div>
+        <article id="letter-paper" class="letter-paper paper-card" aria-hidden="true">
+          <div class="letter-top">a little letter <span>♡</span></div>
+          <div id="letter-content" class="letter-content"></div>
+          <p class="letter-signature">With lots of good wishes, <span>♡</span></p>
+        </article>
+      </div>
+      <div class="page-actions"><button class="secondary-btn" data-prev type="button">← Back</button><button class="primary-btn" data-next type="button">Continue <span>→</span></button></div>
+    </section>
+
+    <!-- PAGE 7: GAME -->
+    <section class="page page-scroll" id="page-7" data-page="7">
+      <div class="section-heading">
+        <p class="eyebrow">a little space for your thoughts</p>
+        <h2>Let's <span>Find Out!</span></h2>
+        <p>Ada 7 pertanyaan kecil buat kamu. Jawab sesantai mungkin — boleh singkat, boleh juga cerita panjang seperti essay. ♡</p>
+      </div>
+      <div class="game-card paper-card" id="friend-game">
+        <div class="game-title-row"><span class="game-number blue-number">♡</span><div><p class="eyebrow">seven little questions</p><h3>I Wish You...</h3></div></div>
+        <p class="games-note">Before you answer these questions, take a little moment for yourself, ya.</p>
+
+        <p class="games-note">Ini bukan sebuah tes, jadi nggak ada jawaban benar atau salah. Kamu bebas menuliskan apa pun yang ingin kamu ceritakan, mulai dari dreams, memories, feelings, sampai hal-hal kecil yang mungkin jarang kamu ceritakan kepada orang lain.</p>
+
+        <p class="games-note">I hope these little questions can help you appreciate how far you've come, remember all the things you've been through, and realize that there are still so many beautiful things waiting for you ahead.</p>
+
+        <p class="games-note">So, take your time, enjoy the questions, and just be yourself. No need to overthink your answers!</p>
+
+        <p class="games-note">Enjoy your little moment, Jessica! ♡</p>
+
+        <form id="wish-form" class="wish-form">
+          <label class="wish-question" for="wish-1">1. Apa tiga hal yang paling kamu harapkan di umur yang baru ini?</label>
+          <textarea id="wish-1" name="wish1" rows="3" placeholder="Ceritakan harapanmu di sini..."></textarea>
+          <label class="wish-question" for="wish-2">2. Apa hal dari dirimu yang sebenarnya kamu banggakan, tetapi jarang kamu ceritakan kepada orang lain?</label>
+          <textarea id="wish-2" name="wish2" rows="3" placeholder="Boleh cerita sedikit atau banyak..."></textarea>
+          <label class="wish-question" for="wish-3">3. Kalau bisa bertemu dirimu yang dulu, apa yang ingin kamu sampaikan kepadanya?</label>
+          <textarea id="wish-3" name="wish3" rows="3" placeholder="I'm curious to know..."></textarea>
+          <label class="wish-question" for="wish-4">4. Apa impian besar yang ingin kamu wujudkan suatu hari nanti, dan kenapa impian itu begitu berarti bagimu?</label>
+          <textarea id="wish-4" name="wish4" rows="3" placeholder="Your idea could be anything ♡"></textarea>
+          <label class="wish-question" for="wish-5">5. Apa hal baik dalam dirimu yang ingin lebih kamu percayai? Adakah sesuatu yang selama ini sering kamu ragukan?</label>
+          <textarea id="wish-5" name="wish5" rows="3" placeholder="Tulis sesukamu..."></textarea>
+          <label class="wish-question" for="wish-6">6. Siapa atau hal apa yang paling kamu syukuri saat ini? Ceritakan kenapa hal itu begitu berarti bagimu.</label>
+          <textarea id="wish-6" name="wish6" rows="3" placeholder="Dream a little bigger..."></textarea>
+          <label class="wish-question" for="wish-7">7. Kalau suatu hari nanti kamu membaca kembali tulisan ini di ulang tahun berikutnya, pesan apa yang ingin kamu sampaikan kepada dirimu sendiri?</label>
+          <textarea id="wish-7" name="wish7" rows="4" placeholder="This space is yours. You can write anything here ♡"></textarea>
+          <div class="wish-actions">
+            <button class="primary-btn" type="submit">Simpan jawabanku ♡</button>
+            <button class="secondary-btn" id="download-wishes" type="button">Download jawaban ↓</button>
+          </div>
+          <p id="wish-save-status" class="quiz-feedback" aria-live="polite">Jawaban tersimpan di browser ini saat kamu menekan tombol simpan.</p>
+        </form>
+      </div>
+      <div class="page-actions"><button class="secondary-btn" data-prev type="button">← Back</button><button class="primary-btn" data-next type="button">One Last Thing <span>→</span></button></div>
+    </section>
+
+    <!-- PAGE 8: FINAL -->
+    <section class="page" id="page-8" data-page="8">
+      <div class="final-card paper-card">
+        <div class="final-sparkles" aria-hidden="true">✦　♡　✧　✿</div>
+        <p class="eyebrow">and that's a wrap...</p>
+        <h2>One Last <span>Thing</span></h2>
+        <div class="final-illustration" aria-hidden="true"><span>🎁</span><span>🌷</span><span>✨</span></div>
+        <p class="final-message">May life always be kind to you. Semoga setiap langkahmu dipertemukan dengan hal-hal baik, orang-orang baik, dan kesempatan yang membahagiakan.</p>
+        <p class="final-message">Keep growing, keep smiling, and never stop being you. You deserve beautiful things!</p>
+        <p class="final-birthday">Once again, Happy Birthday! <span>♡</span></p>
+
+        <div class="hidden-message-box" id="hidden-message-box">
+          <div id="hidden-lock" class="lock-icon">🔒</div>
+          <h3 id="hidden-title">A little secret is still waiting...</h3>
+          <p id="hidden-description">Terima kasih sudah mengisi pertanyaan kecil ini. Pesan rahasianya sudah menunggu!</p>
+          <button id="unlock-message" class="primary-btn small-btn" type="button">Buka pesan rahasia ♡</button>
+          <div id="hidden-message" class="hidden-message hidden">
+            <span class="hidden-heart">♡</span>
+            <p id="hidden-message-text">Yayyy, akhirnya kamu berhasil membuka little secret ini!</p>
+
+        <p id="hidden-message-text">Thank you sudah meluangkan waktu untuk menjawab pertanyaan-pertanyaan kecil tadi. Thank you juga sudah berbagi sedikit cerita, dreams, memories, dan thoughts kamu denganku.
+
+        <p id="hidden-message-text">I hope melalui pertanyaan sederhana ini, kamu bisa sedikit lebih mengenal dan menghargai dirimu sendiri. Jangan lupa untuk selalu bangga dengan setiap proses yang sudah kamu lewati, ya.
+
+        <p id="hidden-message-text">And one more thing, I hope this little surprise made you smile today.
+
+        <p id="hidden-message-text">You deserve all the good things waiting for you ahead. ♡
+
+        <p id="hidden-message-text">Once again, thank you for being you! </p>
+          </div>
+        </div>
+        <div class="final-actions">
+          <button class="secondary-btn" data-prev type="button">← Back</button>
+          <button id="restart-website" class="primary-btn" type="button">Start Again ↻</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>made with care & a little bit of magic</span><span>♡</span></footer>
+  <audio id="background-music" src="assets/music/best_friend.mp3" preload="none" loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>
