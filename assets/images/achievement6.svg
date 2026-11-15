@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff0d8"/><stop offset="1" stop-color="#e9e3fb"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="700" fill="url(#bg)"/>
+  <circle cx="130" cy="120" r="60" fill="#f5bfd0" opacity=".7"/>
+  <circle cx="770" cy="570" r="85" fill="#b9dff4" opacity=".7"/>
+  <path d="M440 180 C370 90 250 190 440 340 C630 190 510 90 440 180Z" fill="#e99ab4" opacity=".75"/>
+  <text x="450" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="43" font-weight="700" fill="#62556d">ACHIEVEMENT 06</text>
+  <text x="450" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#8c7c91">Ganti dengan foto asli</text>
+  <text x="450" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#b08da0">A Little Surprise For You ♡</text>
+</svg>
